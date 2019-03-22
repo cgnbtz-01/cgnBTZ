@@ -1,66 +1,68 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {TabsPage} from './tabs.page';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    children: [
-      {
-        path: '',
-        loadChildren: '../../../modules/pages/auth/pages/login/login.module#LoginPageModule'
-      }
-    ]
-  },
-  {
-    path: 'tabs',
-    component: TabsPage,
-    children: [
-      {
-        path: 'home',
+    {
+        path: 'login',
         children: [
-          {
-            path: '',
-            loadChildren: '../../../modules/pages/home/home.module#HomePageModule'
-          }
+            {
+                path: '',
+                loadChildren: '../../../modules/pages/auth/pages/login/login.module#LoginPageModule'
+            }
         ]
-      },
-      {
-        path: 'map',
+    },
+    {
+        path: 'tabs',
+        component: TabsPage,
         children: [
-          {
-            path: '',
-            loadChildren: '../map/map.module#MapPageModule'
-          }
+            {
+                path: 'home',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../../../modules/pages/home/home.module#HomePageModule'
+                    }
+                ]
+            },
+            {
+                path: 'map',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../map/map.module#MapPageModule'
+                    }
+                ]
+            },
+            {
+                path: 'options',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../options/options.module#OptionsPageModule'
+                    }
+                ]
+            },
+            {
+                path: '',
+                redirectTo: 'login',
+                pathMatch: 'full'
+            }
         ]
-      },
-      {
-        path: 'options',
-        children: [
-          {
-            path: '',
-            loadChildren: '../options/options.module#OptionsPageModule'
-          }
-        ]
-      },
-      {
+    },
+    {
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
-      }
-    ]
-  },
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  }
+    }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [RouterModule]
+    imports: [
+        RouterModule.forChild(routes)
+    ],
+    exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+
+export class TabsPageRoutingModule {
+}
