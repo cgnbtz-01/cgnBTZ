@@ -9,10 +9,31 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
+import {IonicStorageModule} from '@ionic/storage';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    imports: [
+        BrowserModule,
+        IonicStorageModule.forRoot({
+            name: 'cgnBTZdb',
+            driverOrder: ['indexeddb', 'sqlite', 'websql']
+        }),
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
+        IonicModule.forRoot(),
+        AppRoutingModule
+    ],
     providers: [
         StatusBar,
         SplashScreen,
@@ -22,4 +43,8 @@ import {AppComponent} from './app.component';
 })
 
 export class AppModule {
+}
+
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

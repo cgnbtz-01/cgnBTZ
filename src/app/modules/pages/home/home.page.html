@@ -1,9 +1,44 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Home</ion-title>
+        <ion-title id="header">{{'home_title' | translate}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-grid id="grid_header">
+        <ion-row id="row_logo">
+            <ion-col id="col_title" no-padding>
+                <h1 id="h1_title">{{'btz_title' | translate}}</h1>
+            </ion-col>
+            <ion-col id="col_logo" no-padding>
+                <ion-img id="logo" src="../../../../assets/icons/BTZ_App_Logo_V1.0.svg" alt="{{'btz_logo' | translate}}"></ion-img>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid id="grid_body" padding>
+        <ion-row class="row_body">
+            <ion-col class="col_body">
+                <div class="body_div">
+                    <ion-icon class="body_icon" name="folder" (click)="routing('folder')"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="col_body">
+                <div class="body_div">
+                    <ion-icon class="body_icon" name="map" (click)="routing('map')"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row_body">
+            <ion-col class="col_body">
+                <div class="body_div">
+                    <ion-icon class="body_icon" name="paper" (click)="routing('news')"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="col_body">
+                <div class="body_div">
+                    <ion-icon class="body_icon" name="settings" (click)="routing('options')"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

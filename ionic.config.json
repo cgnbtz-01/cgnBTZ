@@ -1,5 +1,7 @@
 {
-    "name": "cgnBTZ",
-    "integrations": {},
-    "type": "angular"
+  "name": "cgnBTZ",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
 }

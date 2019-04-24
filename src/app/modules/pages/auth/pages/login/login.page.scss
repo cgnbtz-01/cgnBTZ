@@ -1,1 +1,106 @@
+#grid_header {
+    height: 138px;
+}
 
+#row_logo {
+    text-align: right;
+    text-align: -webkit-right;
+    text-align: -moz-right;
+}
+
+#col_logo {
+    max-width: 128px;
+}
+
+#logo {
+    height: 128px;
+    width: 128px;
+}
+
+#col_title {
+    width: auto;
+}
+
+#h1_title {
+    margin: 0 0 0 8px;
+    color: #5567AE;
+    font-family: 'KaushanScriptRegular';
+    font-size: 58px;
+    text-align: left;
+}
+
+#grid_body {
+    height: 404px;
+}
+
+.row_margin {
+    margin-bottom: 18px;
+}
+
+.labels {
+    padding-left: 15px !important;
+    font-size: 22px;
+}
+
+.inputs {
+    text-align: left;
+    font-size: 22px;
+    margin: 0;
+    --padding-start: 15px;
+    border-style: solid;
+    border-color: #5567AE;
+    border-radius: 25px;
+    border-width: 2px;
+}
+
+#row_button {
+    text-align: center;
+}
+
+#login_button {
+    height: 36px;
+    width: 154px;
+    --border-radius: 31px;
+    font-size: 22px;
+}
+
+#row_link {
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+
+#item_link {
+    max-width: 268px;
+    text-align: center;
+    color: #E6A444;
+    font-size: 22px;
+}
+
+#icon_warning {
+    font-size: 64px;
+}
+
+#grid_footer {
+    height: calc(100vh - (196px + 404px));
+    min-height: 136px;
+}
+
+#row_empty_space {
+    height: 25%;
+}
+
+#row_footer {
+    height: 75%;
+}
+
+#empty_space {
+    height: 100%;
+    width: 100%;
+}
+
+#footer {
+    height: 100%;
+    width: 100%;
+    background-color: #F7F5F4;
+}

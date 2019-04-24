@@ -1,0 +1,21 @@
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {IonicModule} from '@ionic/angular';
+import {TranslateModule} from '@ngx-translate/core';
+import {FolderPage} from './folder.page';
+
+@NgModule({
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        TranslateModule.forChild(),
+        RouterModule.forChild([{path: '', component: FolderPage}])
+    ],
+    declarations: [FolderPage]
+})
+
+export class FolderPageModule {
+}

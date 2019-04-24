@@ -15,8 +15,16 @@ const routes: Routes = [
         loadChildren: './modules/pages/home/home.module#HomePageModule'
     },
     {
+        path: 'folder',
+        loadChildren: './shared/pages/folder/folder.module#FolderPageModule'
+    },
+    {
         path: 'map',
-        loadChildren: './shared/map/map.module#MapPageModule'
+        loadChildren: './shared/pages/map/map.module#MapPageModule'
+    },
+    {
+        path: 'news',
+        loadChildren: './shared/pages/news/news.module#NewsPageModule'
     },
     {
         path: 'options',

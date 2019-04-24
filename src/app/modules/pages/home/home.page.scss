@@ -1,1 +1,63 @@
+#grid_header {
+    height: 138px;
+}
 
+#row_logo {
+    text-align: right;
+    text-align: -webkit-right;
+    text-align: -moz-right;
+}
+
+#col_logo {
+    max-width: 128px;
+}
+
+#logo {
+    height: 128px;
+    width: 128px;
+}
+
+#col_title {
+    width: auto;
+}
+
+#h1_title {
+    margin: 0 0 0 8px;
+    color: #5567AE;
+    font-family: 'KaushanScriptRegular';
+    font-size: 58px;
+    text-align: left;
+}
+
+#grid_body {
+    text-align: center;
+    height: 100vw;
+    width: 100%;
+}
+
+.row_body {
+    height: 50%;
+    width: 100%;
+}
+
+.col_body {
+    background-color: #5567AE;
+    margin: 0.5%;
+    padding: 1%;
+}
+
+.body_div {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    border: 0 none #ffffff;
+    border-radius: 36px;
+}
+
+.body_icon {
+    min-height: 128px;
+    min-width: 128px;
+    height: 100%;
+    width: 100%;
+    color: #E6A444;
+}

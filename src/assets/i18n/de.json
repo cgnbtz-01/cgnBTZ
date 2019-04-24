@@ -1,4 +1,20 @@
 {
-    "login": "Login",
-    "password_vergessen": "Password Vergessen?"
+    "btz_title": "Mein BTZ",
+    "btz_logo": "BTZ Logo",
+
+    "login_title": "Login",
+    "general_btzID": "BTZ-ID",
+    "general_password": "Password",
+    "login_anmelden": "Login",
+    "password_vergessen": "Password Vergessen? Hier drücken",
+
+    "home_title": "Home",
+
+    "folder_title": "Arbeitsplatz",
+
+    "map_title": "Karte",
+
+    "news_title": "Neuigkeiten",
+
+    "options_title": "Optionen"
 }

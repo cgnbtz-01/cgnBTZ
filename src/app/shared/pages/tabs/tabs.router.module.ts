@@ -26,11 +26,29 @@ const routes: Routes = [
                 ]
             },
             {
+                path: 'folder',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../folder/folder.module#FolderPageModule'
+                    }
+                ]
+            },
+            {
                 path: 'map',
                 children: [
                     {
                         path: '',
                         loadChildren: '../map/map.module#MapPageModule'
+                    }
+                ]
+            },
+            {
+                path: 'news',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../news/news.module#NewsPageModule'
                     }
                 ]
             },
